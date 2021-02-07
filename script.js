@@ -1,10 +1,9 @@
 const searchInput = document.querySelector("#search-input");
 const submit = document.querySelector("#submit");
 const foods = document.querySelector("#meals");
-const availResult = document.querySelector("#availResult")
-const single_mealEl = document.querySelector("#single-meal");
+const availResult = document.querySelector("#availResult");
 
-//-------searchMeal function-----------
+//-------searchMeal function-----------//
 const searchMeal = event => {
   event.preventDefault();
   const foodName = searchInput.value;
@@ -30,15 +29,14 @@ const searchMeal = event => {
     searchInput.value = "";
   }
 }
-//----- Show meal ditails function----
+//----- Show meal ditails function------//
 const showMealDitails = mealName => {
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`; //----API---
   fetch(url)
-    .then(res => res.json())
+    .then(response => response.json())
     .then((data) => getMeals(data.meals[0]))
 }
-
-//---- Get meals function----------
+//---- Get meals function----------//
 const getMeals = mealData => {
   const setMealDitails = document.querySelector('.showClickedMeal');
   setMealDitails.innerHTML = `
