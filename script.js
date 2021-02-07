@@ -30,6 +30,7 @@ const searchMeal = event => {
     searchInput.value = "";
   }
 }
+//----- Show meal ditails function----
 const showMealDitails = mealName => {
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${mealName}`; //----API---
   fetch(url)
@@ -37,7 +38,8 @@ const showMealDitails = mealName => {
     .then((data) => getMeals(data.meals[0]))
 }
 
-function getMeals(mealData) {
+//---- Get meals function----------
+const getMeals = mealData => {
   const setMealDitails = document.querySelector('.showClickedMeal');
   setMealDitails.innerHTML = `
     <img src="${mealData.strMealThumb}"/>
