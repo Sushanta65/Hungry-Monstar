@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  margin: auto;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.form-around,form {
+  display: flex;
+  padding-top: 30px;
+}
+input,
+button {
+  border: 1px solid #dedede;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  font-size: 14px;
+  padding: 10px 10px;
+  margin: 0;
+}
+#search-input {
+  width: 500px;
+}
+input#search-input:focus {
+  outline: none;
+  border-color: #ff3b00;
+}
+.search-btn {
+  width: 100px;
+  cursor: pointer;
+  border-left: 0;
+  border-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: #ff3b00;
+  color: white;
+  transition: all 1s;
+}
+button.search-btn:focus {
+  outline: none;
+}
+button.search-btn:hover {
+  background: #c13309;
+}
+.search-result{
+  color:black;
+  padding-top: 20px;
+}
+.no-result{
+  color:red;
+  padding-top: 20px;
+}
+#meals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 22px;
+  margin-top: 22px;
+}
+.meal {
+  border: 1px solid #c7c7c7;
+  cursor: pointer;
+}
+.meal img {
+  width: 100%;
+  height: 100%;
+  border: 4px #fff solid;
+  border-radius: 2px;
+}
+.food-info h3 {
+  font-size: 22px;
+  color: black;
+  transition:all .4s;
+}
+.meal:hover .food-info h3{
+  color: #ff3b00;
+}
+.meal:hover .food-info {
+  opacity: 1;
+}
+/* ------------Show Meals diatils styles-------------------- */
+.showClickedMeal{
+  text-align:left;
+  width: 350px;
+}
+.showClickedMeal img{
+  width: 100%;
+}
+.showClickedMeal h3,h6{
+  padding:5px;
+}
